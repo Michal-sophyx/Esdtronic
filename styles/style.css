@@ -112,9 +112,7 @@ img {
 }
 
 .grid_basic {
-  display: grid;
-  grid-template-columns: repeat(10, 10vw);
-  grid-template-rows: 80vh;
+  display: flex;
   padding: 8.4375rem 0;
   min-width: 100%;
   height: 100%;
@@ -122,7 +120,7 @@ img {
 }
 .grid_basic::after {
   content: "";
-  background-color: #b6bbe7;
+  background-color: rgb(182.3447552448, 187.0979020979, 230.5552447552);
   height: 100%;
   width: 100%;
   position: absolute;
@@ -133,7 +131,7 @@ img {
 }
 .grid_basic.white::after {
   content: "";
-  background-color: #d9dbf2;
+  background-color: rgb(216.6895104895, 219.1958041958, 242.1104895105);
   height: 100%;
   width: 100%;
   position: absolute;
@@ -167,7 +165,8 @@ li, a {
   background: rgba(6, 65, 159, 0.88);
   position: fixed;
   z-index: 250;
-  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
   min-height: 1%;
 }
 .navigation::after {
@@ -199,7 +198,7 @@ li, a {
 .navigation_logo h4 {
   padding-left: 1.5625rem;
   font-size: 28px;
-  color: #d9e7fe;
+  color: rgb(217.4181818182, 231.3636363636, 253.5818181818);
   letter-spacing: 0.25rem;
 }
 
@@ -216,7 +215,7 @@ li, a {
 }
 .navigation_buttons ul a {
   font-size: 18px;
-  color: #d9e7fe;
+  color: rgb(217.4181818182, 231.3636363636, 253.5818181818);
 }
 .navigation_buttons ul a.active {
   color: var(--pf-color_light_accent1);
@@ -285,7 +284,7 @@ li, a {
   filter: opacity(5%);
 }
 .logo_bgr svg path {
-  fill: #2d7bf7;
+  fill: rgb(45.4090909091, 123.1818181818, 247.0909090909);
 }
 
 .hero {
@@ -333,7 +332,7 @@ li, a {
   font-weight: 300;
   font-size: 22px;
   letter-spacing: 1.25px;
-  color: #0a2ef5;
+  color: rgb(10.4525139665, 45.9972067039, 245.0474860335);
   align-self: flex-end;
 }
 .hero h1 {
@@ -359,9 +358,10 @@ li, a {
 .hero_text_section {
   display: flex;
   flex-direction: column;
-  background-color: #3c84f8;
+  background-color: rgb(60.1527272727, 132.4545454545, 247.6472727273);
   padding: 1.5625rem 1.5625rem;
   font-size: 15px;
+  height: -moz-max-content;
   height: max-content;
   font-weight: 500;
   filter: drop-shadow(0px 1rem 2rem rgba(4, 40, 98, 0.25));
@@ -374,19 +374,19 @@ li, a {
   font-weight: 600;
 }
 .btn_main:hover, .btn_main:active {
-  color: #042964;
-  border: 1.5px solid #404dbf;
-  background-color: #c49334;
+  color: rgb(3.7745454545, 40.8909090909, 100.0254545455);
+  border: 1.5px solid rgb(64.1454545455, 76.6181818182, 190.6545454545);
+  background-color: rgb(195.9683794466, 146.976284585, 51.9316205534);
 }
 
 .btn_second {
-  border: 1.5px solid #6670cc;
-  color: #6670cc;
+  border: 1.5px solid rgb(102.206993007, 112.2027972028, 203.593006993);
+  color: rgb(102.206993007, 112.2027972028, 203.593006993);
   font-weight: 600;
 }
 .btn_second:hover, .btn_second:active {
-  color: #404dbf;
-  border: 1.5px solid #404dbf;
+  color: rgb(64.1454545455, 76.6181818182, 190.6545454545);
+  border: 1.5px solid rgb(64.1454545455, 76.6181818182, 190.6545454545);
 }
 
 .btn {
@@ -439,6 +439,7 @@ li, a {
   grid-column: 6/8;
   align-self: center;
   justify-self: flex-start;
+  width: -moz-max-content;
   width: max-content;
   border: none;
   color: var(--pf-color_light_accent1);
@@ -447,7 +448,7 @@ li, a {
   content: "";
   height: 1px;
   width: 0%;
-  background-color: #987228;
+  background-color: rgb(151.6205533597, 113.7154150198, 40.1794466403);
   display: inline-block;
   position: absolute;
   bottom: 0;
@@ -574,8 +575,9 @@ li, a {
 }
 
 .card_text p {
+  height: -moz-max-content;
   height: max-content;
-  background-color: #3c84f8;
+  background-color: rgb(60.1527272727, 132.4545454545, 247.6472727273);
   font-size: clamp(0.875rem, 0.9375rem, 1.5625rem);
   line-height: 1.79rem;
   padding: 2.5rem;
@@ -591,7 +593,7 @@ li, a {
 }
 
 .clean_text span {
-  color: #c09033;
+  color: rgb(191.9367588933, 143.95256917, 50.8632411067);
   font-size: 1.5rem;
 }
 
@@ -601,20 +603,21 @@ li, a {
   justify-self: center;
   align-self: center;
   text-decoration: none;
-  color: #c09033;
+  color: rgb(191.9367588933, 143.95256917, 50.8632411067);
   font-weight: 600;
   z-index: 300;
   padding: 1.875rem 0 0.3125rem 0;
+  width: -moz-max-content;
   width: max-content;
 }
 .btn_right:hover {
-  color: #b48730;
+  color: rgb(179.8418972332, 134.8814229249, 47.6581027668);
 }
 .btn_right::before {
   content: "";
   height: 1px;
   width: 0%;
-  background-color: #987228;
+  background-color: rgb(151.6205533597, 113.7154150198, 40.1794466403);
   display: inline-block;
   position: absolute;
   bottom: 0;
@@ -638,20 +641,21 @@ li, a {
   align-self: center;
   justify-self: center;
   text-decoration: none;
-  color: #c09033;
+  color: rgb(191.9367588933, 143.95256917, 50.8632411067);
   font-weight: 600;
   z-index: 300;
   padding: 1.875rem 2.5rem 0.3125rem 0;
+  width: -moz-max-content;
   width: max-content;
 }
 .btn_left:hover {
-  color: #b48730;
+  color: rgb(179.8418972332, 134.8814229249, 47.6581027668);
 }
 .btn_left::before {
   content: "";
   height: 1px;
   width: 0%;
-  background-color: #987228;
+  background-color: rgb(151.6205533597, 113.7154150198, 40.1794466403);
   display: inline-block;
   position: absolute;
   bottom: 0;
@@ -663,7 +667,7 @@ li, a {
 }
 
 .capter_name {
-  color: #c09033;
+  color: rgb(191.9367588933, 143.95256917, 50.8632411067);
   font-size: 1.5rem;
 }
 
@@ -678,6 +682,7 @@ li, a {
 
 .partners {
   grid-template-rows: repeat(3, 10vh);
+  height: -moz-max-content;
   height: max-content;
   transform: translateY(-5%);
   padding-bottom: 1.5625rem;
@@ -728,7 +733,7 @@ li, a {
 .contact_wraper_general {
   grid-row: 1/2;
   grid-column: 2/10;
-  background-color: #d0e1fd;
+  background-color: rgb(207.5890909091, 225.1818181818, 253.2109090909);
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -758,7 +763,7 @@ form {
   margin: 0.9375rem;
 }
 .contact_form input, .contact_form textarea {
-  background-color: #95bcfb;
+  background-color: rgb(149.2979591837, 187.5306122449, 250.5020408163);
   margin: 0.125rem 0.9375rem;
   border: none;
   border-radius: 0.3125rem;
@@ -828,11 +833,11 @@ form {
   height: 50%;
   border-radius: 0.625rem;
   border: none;
-  background-color: #c49334;
+  background-color: rgb(195.9683794466, 146.976284585, 51.9316205534);
   color: var(--pf-color_accent_dark);
 }
 #send:hover, #send:active {
-  background-color: #b48730;
+  background-color: rgb(179.8418972332, 134.8814229249, 47.6581027668);
   cursor: pointer;
   box-shadow: 0.125rem 0.125rem 0.3125rem var(--pf-shadow_color);
 }
@@ -853,7 +858,7 @@ form {
 .contact_form_right {
   height: 100%;
   width: 35%;
-  background-color: #0859da;
+  background-color: rgb(8.2254545455, 89.1090909091, 217.9745454545);
   padding: 1.5625rem;
   border-radius: 0.75rem 0 0 0.75rem;
   justify-self: flex-start;
@@ -904,7 +909,7 @@ form {
 }
 
 .descr {
-  color: #d6af64;
+  color: rgb(213.9826086957, 175.2869565217, 100.2173913043);
   padding-top: 1.5625rem;
 }
 
@@ -1008,11 +1013,12 @@ form {
 }
 
 .footer {
+  height: -moz-max-content;
   height: max-content;
   display: flex;
   flex-direction: column;
-  color: #fdfdfd;
-  background-color: #484953;
+  color: rgb(253.1297709924, 253.1564885496, 253.3702290076);
+  background-color: rgb(71.9893129771, 73.1694656489, 82.6106870229);
   width: 100%;
 }
 
@@ -1041,8 +1047,8 @@ form {
   flex-direction: row;
   justify-content: center;
   font-size: 10px;
-  color: #fdfdfd;
-  background-color: #7d7f8e;
+  color: rgb(253.1297709924, 253.1564885496, 253.3702290076);
+  background-color: rgb(125.0458015267, 126.9022900763, 141.7541984733);
   height: 100%;
   width: 100vw;
   padding: 0.9375rem;
@@ -1096,6 +1102,7 @@ form {
     height: 100%;
   }
   .right_side {
+    height: -moz-max-content;
     height: max-content;
     height: 100%;
   }
@@ -1107,6 +1114,7 @@ form {
     transition: all 0.55s ease-in-out backwards;
   }
   .left_side {
+    height: -moz-max-content;
     height: max-content;
   }
   .left_side img {
@@ -1391,6 +1399,7 @@ form {
   }
   .hero .text_wraper {
     width: 100%;
+    height: -moz-max-content;
     height: max-content;
   }
   .hero .img_wraper {
