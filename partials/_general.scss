@@ -1,5 +1,5 @@
 body{
-    background-color: #c1c1;
+    background-color: pf(color_second_bgr);
 }
 h1,
 h2,
@@ -8,11 +8,15 @@ h4,
 h5,
 h6,
 span{
-    font-family: 'Bebas Neue', cursive;
+    font-family: 'Oswald', cursive;
 }
 
-p,a,li,ul{
-    font-family: 'Oswald', sans-serif; 
+a,li,ul{
+    font-family: 'Nunito Sans', sans-serif; 
+}
+
+p{
+    font-family:'Lora', sans-serif;
 }
 
 img{
@@ -21,15 +25,16 @@ img{
 
 .grid_basic{
     display: flex;
-    padding: rem(135) 0;
-    min-width: 100%;
+    padding: 0 rem(135) ;
+    margin: rem(130) 0;
+    min-width: 90%;
     height: 100%;
     position:relative;
     
 
     &::after{
         content: "";
-        background-color: color_change(lighten, color_light_accent3, 9%);
+        
         height: 100%;
         width: 100%;
         position:absolute;
@@ -47,7 +52,6 @@ img{
     &.white{
     &::after {
             content: "";
-            background-color:color_change(lighten, color_light_accent3, 18%);
             height: 100%;
             width: 100%;
             position: absolute;
@@ -65,10 +69,7 @@ img{
    
 }
 
-.hero{
-    height: 100vh;
-    
-}
+
 
 li,a{
     text-decoration: none;

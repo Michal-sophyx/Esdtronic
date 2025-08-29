@@ -5,13 +5,13 @@
         {
             "format": "expanded",
             "extensionName": ".css",
-            "savePath":"./styles/"
+            "savePath":"/styles/"
         },
 
         {
             "format": "compressed",
             "extensionName": ".min.css",
-            "savePath":"./styles/"
+            "savePath":"/styles/"
         }
 
     ]
